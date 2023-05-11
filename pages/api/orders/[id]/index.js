@@ -1,4 +1,4 @@
-// /api/orders/:id
+
 import Order from '@/models/Order';
 import db from '@/utils/db';
 import { getToken } from 'next-auth/jwt';
