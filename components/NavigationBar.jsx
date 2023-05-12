@@ -258,23 +258,30 @@ export default function NavigationBar() {
                 >
                   home
                 </Link>
+
                 <Link
-                  href={"/products"}
+                  href={"/profile"}
                   className="text-lg py-4 tracking-wider cursor-pointer text-gray-900 capitalize mr-0"
                 >
-                  products
+                  Profile
                 </Link>
+
                 <Link
-                  href={"/categories"}
-                  className="text-lg py-4 tracking-wider cursor-pointer text-gray-900 capitalize mr-0"
+                  href="/order-history"
+           
                 >
-                  categories
+                  Order History
                 </Link>
+
                 <Link
                   href={"/cart"}
                   className="text-lg py-4 tracking-wider cursor-pointer text-gray-900 capitalize mr-0"
                 >
                   cart
+                </Link>
+
+                <Link href="#" onClick={logoutClickHandler}>
+                  Sign out
                 </Link>
                 <button className="text-gray-900 cursor-pointer transition-all duration-700 py-4">
                   {renderThemeChanger()}
