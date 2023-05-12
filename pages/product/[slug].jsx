@@ -7,12 +7,18 @@ import db from "@/utils/db";
 import axios from "axios";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 
 export default function ProductPage(props) {
   const { product } = props;
 
+  const [selectedImage, setSelectedImage] = useState(product.image);
+
+  const images = [product.image, ...product.images];
+
   const { state, dispatch } = useContext(Store);
+
+  console.log(product);
 
   const router = useRouter();
 
@@ -29,7 +35,7 @@ export default function ProductPage(props) {
       (x) => x.slug === product.slug
     );
     const quantity = existingItem ? existingItem.quantity + 1 : 1;
-    const {data} = await axios.get(`/api/products/${product._id}`)
+    const { data } = await axios.get(`/api/products/${product._id}`);
 
     if (data.countInStock < quantity) {
       alert("Sorry but the current product is out of stock");
@@ -39,6 +45,7 @@ export default function ProductPage(props) {
     dispatch({ type: "Add_Cart_Item", payload: { ...product, quantity } });
     router.push("/cart");
   };
+
   return (
     <div>
       <div className="sm:px-16 px-6 flex justify-center items-center">
@@ -50,17 +57,48 @@ export default function ProductPage(props) {
       <div className="sm:py-16 px-6 py-6 flex justify-center items-start">
         <div className="xl:max-w-[1280px] w-full">
           <div className="grid md:grid-cols-3 md:gap-10">
-            <div className="md:col-span-1 ">
-              <Image
-                src={product.image}
-                alt={product.name}
-                width={650}
-                height={550}
-                quality={100}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                className="rounded-md shadow-xl"
-              />
+            <div className="md:col-span-1 flex flex-col items-center">
+              <div>
+                {/* parent Image */}
+
+                <div>
+                  <Image
+                    src={selectedImage}
+                    alt={product.name}
+                    width={650}
+                    height={550}
+                    quality={100}
+                    priority
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="rounded-md shadow-xl "
+                  />
+                </div>
+
+                {/* <div className="flex justify-center">
+                  {images.map((image, index) => (
+                    <div
+                      key={index}
+                      className="flex items-center justify-center w-24 h-24 mx-2"
+                    >
+               
+                      <Image
+                        src={image}
+                        alt={product.name}
+                        width={120}
+                        height={100}
+                        quality={100}
+                        priority
+                        className="rounded-md"
+                        onClick={() =>
+                          setSelectedImage(index === 0 ? product.image : image)
+                        }
+                      />
+                    </div>
+                  ))}
+                </div> */}
+              </div>
             </div>
+
             <ul>
               <li className="mb-3">
                 <h1 className="text-lg ">{product.name}</h1>
@@ -99,6 +137,7 @@ export default function ProductPage(props) {
                     )}
                   </div>
                 </div>
+
                 <div className="flex justify-center">
                   <button
                     className="relative inline-flex

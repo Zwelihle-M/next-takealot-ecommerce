@@ -7,7 +7,6 @@ import Link from "next/link";
 import TakealotLogo from "../public/images/TakealotLogo.svg";
 import { signOut, useSession } from "next-auth/react";
 import { Menu, Transition } from "@headlessui/react";
-import DropdownLink from "./DropdownLink";
 import Cookies from "js-cookie";
 import { Store } from "@/utils/Store";
 

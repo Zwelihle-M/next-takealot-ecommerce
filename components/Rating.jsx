@@ -5,55 +5,24 @@ function Rating(props) {
 
   return (
     <div className="rating flex gap-1">
-      <span>
-        {rating >= 1 ? (
-          <FaStar style={{ color: "#FFD700" }} />
-        ) : rating >= 0.5 ? (
-          <FaStarHalf style={{ color: "#FFD700" }} />
-        ) : (
-          <FaStar style={{ color: "#FFD700" }} />
-        )}
-      </span>
-      <span>
-        {rating >= 2 ? (
-          <FaStar style={{ color: "#FFD700" }} />
-        ) : rating >= 1.5 ? (
-          <FaStarHalf style={{ color: "#FFD700" }} />
-        ) : (
-          <FaStar style={{ color: "#FFD700" }} />
-        )}
-      </span>
-      <span>
-        {rating >= 3 ? (
-          <FaStar style={{ color: "#FFD700" }} />
-        ) : rating >= 2.5 ? (
-          <FaStarHalf style={{ color: "#FFD700" }} />
-        ) : (
-          <FaStar style={{ color: "#FFD700" }} />
-        )}
-      </span>
-      <span>
-        {rating >= 4 ? (
-          <FaStar style={{ color: "#FFD700" }} />
-        ) : rating >= 3.5 ? (
-          <FaStarHalf style={{ color: "#FFD700" }} />
-        ) : (
-          <FaStar style={{ color: "#FFD700" }} />
-        )}
-      </span>
-      <span>
-        {rating >= 5 ? (
-          <FaStar style={{ color: "#FFD700" }} />
-        ) : rating >= 4.5 ? (
-          <FaStarHalf style={{ color: "#FFD700" }} />
-        ) : (
-          <FaStar style={{ color: "#FFD700" }} />
-        )}
-      </span>
+      {[...Array(5)].map((_, index) => {
+        const ratingValue = index + 0.5;
+        return (
+          <span key={ratingValue}>
+            {rating >= ratingValue ? (
+              <FaStar style={{ color: "#FFD700" }} />
+            ) : rating >= index + 0.25 ? (
+              <FaStarHalf style={{ color: "#FFD700" }} />
+            ) : (
+              <FaStar style={{ color: "#C4C4C4" }} />
+            )}
+          </span>
+        );
+      })}
       {caption ? (
         <span>{caption}</span>
       ) : numReviews != 0 ? (
-        <span>{"" + numReviews + "reviews"}</span>
+        <span>{"" + numReviews + " reviews"}</span>
       ) : (
         ""
       )}
@@ -62,3 +31,5 @@ function Rating(props) {
 }
 
 export default Rating;
+
+

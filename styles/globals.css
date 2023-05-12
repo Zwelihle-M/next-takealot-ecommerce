@@ -2,26 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+.hero-Gradient {
+  position: absolute;
+  width: 540px;
+  height: 551px;
+  left: 750px;
+  top: 147px;
+  background: linear-gradient(
+    156.78deg,
+    #a100eb 3.93%,
+    #df0060 35%,
+    #5b03c7 61.18%,
+    #21b5f4 84.99%
+  );
+  filter: blur(166.972px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer utilities {
+  .animate-spin {
+    animation-duration: 10s;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.card {
+  @apply mb-5 block rounded-lg border border-gray-100 shadow-md
 }

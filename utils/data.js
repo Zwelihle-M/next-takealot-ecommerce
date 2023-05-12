@@ -1,27 +1,29 @@
-import bcrypt from "bcryptjs"
-
+import bcrypt from "bcryptjs";
 
 const data = {
-    users: [
-        {
-            name:"Zwelihle",
-            email:"zwelihle777@gmail.com",
-            password: bcrypt.hashSync("123456789"),
-            isAdmin: true
-        },
-                {
-            name:"Zwelihle",
-            email:"zwelihleuser777@gmail.com",
-            password: bcrypt.hashSync("123456789"),
-            isAdmin: false
-        },
-
-    ],
+  users: [
+    {
+      name: "Zwelihle",
+      email: "zwelihle777@gmail.com",
+      password: bcrypt.hashSync("123456789"),
+      isAdmin: true,
+    },
+    {
+      name: "Zwelihle",
+      email: "zwelihleuser777@gmail.com",
+      password: bcrypt.hashSync("123456789"),
+      isAdmin: false,
+    },
+  ],
   products: [
     {
       name: "Apple MacBook Pro",
       slug: "Apple MacBook Pro M1",
       image: "/images/macbook.png",
+      images: [
+        "/images/2023-macbook-pro.png",
+        "/images/MacBook_Pro_13-inch_M1_2020.png",
+      ],
       category: "Laptops",
       brand: "Apple",
       price: 48999,
@@ -35,6 +37,10 @@ const data = {
       name: "Msi Raider GE78",
       slug: "Raider GE78 HX 13V",
       image: "/images/MSI-Raider-GE78.png",
+      images: [
+        "/images/GE78-HX-13VH.png",
+        "/images/MSI-Raider-GE78-HX-13V-Light-em.png",
+      ],
       category: "Laptops",
       brand: "MSI",
       price: 102999,
@@ -87,13 +93,14 @@ const data = {
       name: "Skullcandy Indy ANC ",
       slug: "INDY™ ANC NOISE CANCELING",
       image: "/images/Skullcandy_Indy_ANC.png",
+      images: ["/images/black-2.jpg", "/images/black.jpg"],
       category: "Headphones & Headsets",
       brand: "SkullCandy",
       price: 1800,
       countInStock: 16,
       description:
         "Skullcandy Indy ANC Wireless earbuds are a high-quality and feature-rich pair of wireless earbuds. They offer up to 19 hours of battery life, active noise cancelling, and a comfortable and secure fit. The earbuds come with touch controls that are intuitive and easy to use, and they support voice assistants for hands-free control. The sound quality is impressive, with well-balanced bass and clear treble that make them ideal for music lovers. Additionally, they feature noise isolation technology that helps block out external noise, allowing you to fully immerse yourself in your music. The active noise cancelling feature works effectively, reducing background noise and making them perfect for use in noisy environments.",
-      rating: 4.5,
+      rating: 3,
       numReviews: 187,
     },
 
@@ -101,6 +108,7 @@ const data = {
       name: "Apple AirPods Pro",
       slug: "Apple AirPods Pro",
       image: "/images/airpods.png",
+      images: ["/images/AirPods-Pro-Featured-Photo.jpeg"],
       category: "Headphones & Headsets",
       brand: "Apple",
       price: 3999,
@@ -127,6 +135,10 @@ const data = {
       name: "Samsung Galaxy S22 Ultra",
       slug: "Samsung Galaxy S22 Ultra",
       image: "/images/galaxy.png",
+      images: [
+        "/images/Samsung-Galaxy-S22-Ultra-Green.png",
+        "/images/ss22ultra.png",
+      ],
       category: "Cellphones",
       brand: "Samsung",
       price: 32000,
@@ -140,6 +152,11 @@ const data = {
       name: "Apple iphone 13 Promax",
       slug: "Apple iphone 13 Promax",
       image: "/images/iphone-13-pro-gold.png",
+      images: [
+        "/images/iPhone-13-Pro-Max.png",
+        "/images/iPhone-13-Pro-all.png",
+        "/images/iphone-14-pro_overview.png",
+      ],
       category: "Cellphones",
       brand: "Apple",
       price: 37000,
@@ -153,6 +170,10 @@ const data = {
       name: "Xbox Series X",
       slug: "Xbox Series X",
       image: "/images/Xbox-Series-X.png",
+      images: [
+        "/images/Xbox-Series-x-front.png",
+        "/images/Xbox-Elite-Controller.png",
+      ],
       category: "Gaming",
       brand: "Microsoft",
       price: 13000,
@@ -179,6 +200,7 @@ const data = {
       name: "MSI GeForce RTX 4090",
       slug: "MSI GeForce RTX 4090",
       image: "/images/MSI-GeForce-RTX-4090.png",
+      images: ["/images/MSI-GeForce-RTX-4090-GAMING-TRIO-24GB-3.png"],
       category: "Gaming",
       brand: "MSI",
       price: 42000,
@@ -201,10 +223,11 @@ const data = {
       rating: 4.5,
       numReviews: 17,
     },
-        {
+    {
       name: "Apex pro mini",
       slug: "Steelseries Apex pro mini",
       image: "/images/Apex_pro_mini.png",
+      images: ["/images/apex_pro_mini_fast.png", "/images/apex-mini-setup.png"],
       category: "Gaming",
       brand: "SteelSeries",
       price: 5200,
