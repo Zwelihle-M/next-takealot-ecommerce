@@ -1,6 +1,5 @@
 import Hero from "@/components/Hero";
 import NavigationBar from "@/components/NavigationBar";
-import PaymentBrands from "@/components/PaymentBrands";
 import ProductItem from "@/components/ProductItem";
 import ShoppingBasket from "@/components/ShoppingBasket";
 import Product from "@/models/Product";
@@ -35,7 +34,7 @@ export default function Home({products}) {
             </div>
 
             <ShoppingBasket/>
-            <PaymentBrands/>
+         
           </div>
         </main>
       </div>

@@ -18,7 +18,7 @@ export default function ProductPage(props) {
 
   const { state, dispatch } = useContext(Store);
 
-  console.log(product);
+
 
   const router = useRouter();
 
