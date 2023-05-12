@@ -71,7 +71,7 @@ export default function ProductPage(props) {
                   height={550}
                   quality={100}
                   priority
-                  className="rounded-md shadow-xl "
+                  className="rounded-md "
                 />
 
               </div>
