@@ -8,7 +8,6 @@ import Payflex from "../public/images/Payflex.svg";
 import Payfast from "../public/images/Payfast.svg";
 import Ozow from "../public/images/Ozow.svg";
 import Mobicred from "../public/images/Mobicred.svg";
-import MasterCard from "../public/images/MasterCard-SVG.svg";
 import eBucks from "../public/images/ebucks.svg";
 import DinnerClub from "../public/images/DinnersClub.svg";
 import AmericanExpress from "../public/images/American-Express.svg";
