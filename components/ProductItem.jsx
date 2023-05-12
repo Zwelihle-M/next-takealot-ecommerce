@@ -9,6 +9,8 @@ export default function ProductItem({ product }) {
       className="h-full w-full bg-gray-400 rounded-xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100 shadow-sm"
       id="shop"
     >
+
+
       <div>
         <div className="h-[300px] mb-4 md:mb-0 md:mr-0 flex flex-col items-center justify-center p-1.5">
           <Link href={`/product/${product.slug}`}>

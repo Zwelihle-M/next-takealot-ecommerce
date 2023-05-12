@@ -25,6 +25,9 @@ export default function Home({products}) {
             <Hero />
 
             {/* products card items */}
+            <h1 className="text-4xl xs:text-5xl sm:text-5xl md:text-5xl bg-gradient-to-bl from-Takealotblue to-ElectricPurple text-transparent bg-clip-text mb-12">
+              Featured Products
+            </h1>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
               {products.map((product) => (
                 <ProductItem product={product} key={product.slug} />

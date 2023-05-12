@@ -56,46 +56,24 @@ export default function ProductPage(props) {
 
       <div className="sm:py-16 px-6 py-6 flex justify-center items-start">
         <div className="xl:max-w-[1280px] w-full">
+          
+
           <div className="grid md:grid-cols-3 md:gap-10">
+            
             <div className="md:col-span-1 flex flex-col items-center">
               <div>
                 {/* parent Image */}
 
-                <div>
-                  <Image
-                    src={selectedImage}
-                    alt={product.name}
-                    width={650}
-                    height={550}
-                    quality={100}
-                    priority
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="rounded-md shadow-xl "
-                  />
-                </div>
+                <Image
+                  src={selectedImage}
+                  alt={product.name}
+                  width={550}
+                  height={550}
+                  quality={100}
+                  priority
+                  className="rounded-md shadow-xl "
+                />
 
-                {/* <div className="flex justify-center">
-                  {images.map((image, index) => (
-                    <div
-                      key={index}
-                      className="flex items-center justify-center w-24 h-24 mx-2"
-                    >
-               
-                      <Image
-                        src={image}
-                        alt={product.name}
-                        width={120}
-                        height={100}
-                        quality={100}
-                        priority
-                        className="rounded-md"
-                        onClick={() =>
-                          setSelectedImage(index === 0 ? product.image : image)
-                        }
-                      />
-                    </div>
-                  ))}
-                </div> */}
               </div>
             </div>
 
@@ -152,6 +130,29 @@ export default function ProductPage(props) {
                   </button>
                 </div>
               </div>
+                <div className="flex">
+                  {images.map((image, index) => (
+                    <div
+                      key={index}
+                      className="flex items-center justify-center w-24 h-24 mx-2"
+                    >
+                      <Image
+                        src={image}
+                        alt={product.name}
+                        width={120}
+                        height={100}
+                        quality={100}
+                        priority
+                        className="rounded-md flex"
+                        onClick={() =>
+                          setSelectedImage(index === 0 ? product.image : image)
+                        }
+                      />
+                    </div>
+                  ))}
+                </div>
+
+
             </div>
           </div>
         </div>

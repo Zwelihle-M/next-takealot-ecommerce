@@ -237,6 +237,20 @@ const data = {
       rating: 5,
       numReviews: 149,
     },
+    {
+      name: "Logitech G PRO X SUPERLIGHT",
+      slug: "Logitech G PRO X SUPERLIGHT Wireless Gaming Mouse",
+      image: "/images/Logitec super light.png",
+      images: ["/images/pro-x-superlight-white.png", "/images/pro-x-superlight-black.png"],
+      category: "Gaming",
+      brand: "Logitech ",
+      price: 2400,
+      countInStock: 12,
+      description:
+        " Meticulously designed in collaboration with many of the world’s leading esports pros. Engineered to win, being the pinnacle of our continued pursuit for the highest levels of performance.-Ultra-lightweight at under 63 grams, with hyper-minimal redesign achieving nearly 25% weight reduction compared to standard PRO Wireless mouse.-Incredibly precise, fast and consistent control with Hero Sensor, designed from the ground up by Logitech G engineers for the best possible gaming performance.",
+      rating: 4,
+      numReviews: 49,
+    },
   ],
 };
 
