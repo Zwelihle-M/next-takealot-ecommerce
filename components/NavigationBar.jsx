@@ -266,12 +266,7 @@ export default function NavigationBar() {
                   Profile
                 </Link>
 
-                <Link
-                  href="/order-history"
-           
-                >
-                  Order History
-                </Link>
+                <Link href="/order-history" className="text-lg py-4 tracking-wider cursor-pointer text-gray-900 capitalize mr-0">Order History</Link>
 
                 <Link
                   href={"/cart"}
@@ -279,8 +274,11 @@ export default function NavigationBar() {
                 >
                   cart
                 </Link>
+                <Link href={"/login"} className="text-lg py-4 tracking-wider cursor-pointer text-gray-900 capitalize mr-0">
+                  signIn
+                </Link>
 
-                <Link href="#" onClick={logoutClickHandler}>
+                <Link href="#" onClick={logoutClickHandler} className="text-lg py-4 tracking-wider cursor-pointer text-gray-900 capitalize mr-0">
                   Sign out
                 </Link>
                 <button className="text-gray-900 cursor-pointer transition-all duration-700 py-4">

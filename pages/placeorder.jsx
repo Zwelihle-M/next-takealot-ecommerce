@@ -199,9 +199,9 @@ export default function PlaceOrderPage() {
                   </table>
 
                   <div>
-                    <Link href="/cart">
+                    <Link href="/cart"className="">
                       <button
-                        className="mb-2 relative inline-flex
+                        className="pt-8 mb-2 relative inline-flex
       items-center justify-center p-4 px-5 py-2 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out rounded-full shadow-xl group hover:ring-1 "
                       >
                         <span className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-600 via-purple-600 to-sky-500"></span>
