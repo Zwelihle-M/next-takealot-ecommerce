@@ -26,7 +26,6 @@ https://next-takealot-ecommerce.vercel.app/
 
 - [Next.js 14](https://nextjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [Shadcn UI](https://ui.shadcn.com/)
 - [MongoDB](https://www.mongodb.com/)
 
 
