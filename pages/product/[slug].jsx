@@ -1,5 +1,6 @@
 import NavigationBar from "@/components/NavigationBar";
 import Rating from "@/components/Rating";
+import ShoppingBasket from "@/components/ShoppingBasket";
 import Product from "@/models/Product";
 import { Store } from "@/utils/Store";
 
@@ -152,6 +153,7 @@ export default function ProductPage(props) {
                     </div>
                   ))}
                 </div>
+                <ShoppingBasket/>
 
 
             </div>
