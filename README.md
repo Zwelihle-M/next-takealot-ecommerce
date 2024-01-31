@@ -1,4 +1,4 @@
-# Next js 13 Ecommerce admin dashboard
+# Next js 13 Ecommerce website
 
 I built this website using Next.js and the MERN stack. Next.js is a
 React-based framework that I used to enable server-side rendering
